@@ -86,7 +86,8 @@ int main(int argc, char ** argv) {
         {"foob", "Zm9vYg=="},
         {"fooba", "Zm9vYmE="},
         {"foobar", "Zm9vYmFy"},
-        {"Esta frase serve de teste para verificar se as funcoes funcionam corretamente", "RXN0YSBmcmFzZSBzZXJ2ZSBkZSB0ZXN0ZSBwYXJhIHZlcmlmaWNhciBzZSBhcyBmdW5jb2VzIGZ1bmNpb25hbSBjb3JyZXRhbWVudGU="}
+        {"Esta frase serve de teste para verificar se as funcoes funcionam corretamente", "RXN0YSBmcmFzZSBzZXJ2ZSBkZSB0ZXN0ZSBwYXJhIHZlcmlmaWNhciBzZSBhcyBmdW5jb2VzIGZ1bmNpb25hbSBjb3JyZXRhbWVudGU="},
+        {"\x4b\xa5\xc6\x0b\x3e\xd5\x90\x59\x33\x35\x36\x75\xb3\x64\x39\x80\xd3\xbd\x11\x62", "S6XGCz7VkFkzNTZ1s2Q5gNO9EWI="},
     };
 
     std::vector<BaseEncodeCase> testCasesB64Decoding =  {
@@ -97,7 +98,7 @@ int main(int argc, char ** argv) {
         {"Zm9vYg==", "foob"},
         {"Zm9vYmE=", "fooba"},
         {"Zm9vYmFy", "foobar"},
-        {"RXN0YSBmcmFzZSBzZXJ2ZSBkZSB0ZXN0ZSBwYXJhIHZlcmlmaWNhciBzZSBhcyBmdW5jb2VzIGZ1bmNpb25hbSBjb3JyZXRhbWVudGU=", "Esta frase serve de teste para verificar se as funcoes funcionam corretamente"}
+        {"RXN0YSBmcmFzZSBzZXJ2ZSBkZSB0ZXN0ZSBwYXJhIHZlcmlmaWNhciBzZSBhcyBmdW5jb2VzIGZ1bmNpb25hbSBjb3JyZXRhbWVudGU=", "Esta frase serve de teste para verificar se as funcoes funcionam corretamente"},
     };
 
     if (TestBase("Base16Encoding", testCasesB16Encoding, BaseEncode::Base16Encode) != true) return -1;

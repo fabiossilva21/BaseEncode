@@ -199,7 +199,7 @@ namespace BaseEncode {
         switch (data.size() % 3) {
             case 2:
                 indexes[0] = (data.at(dataSize - 2) & 0xFC) >> 2;
-                indexes[1] = ((data.at(dataSize - 2) & 0x02) << 4) + ((data.at(dataSize - 1) & 0xF0) >> 4);
+                indexes[1] = ((data.at(dataSize - 2) & 0x03) << 4) + ((data.at(dataSize - 1) & 0xF0) >> 4);
                 indexes[2] = ((data.at(dataSize - 1) & 0x0F) << 2);
 
                 for (int i = 0; i < 3; i++) {
@@ -211,7 +211,7 @@ namespace BaseEncode {
 
             case 1:
                 indexes[0] = (data.at(dataSize - 1) & 0xFC) >> 2;
-                indexes[1] = (data.at(dataSize - 1) & 0x02) << 4;
+                indexes[1] = (data.at(dataSize - 1) & 0x03) << 4;
 
                 for (int i = 0; i < 2; i++) {
                     output.push_back(base64Dictionary[indexes[i]]);

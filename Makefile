@@ -1,5 +1,5 @@
 include_dirs = -Iinc
-CPPFLAGS = $(include_dirs) -std=c++14
+CPPFLAGS = $(include_dirs) -std=c++14 -g
 
 all: out/baseencode.o out/test run
 
